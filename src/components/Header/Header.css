@@ -1,0 +1,12 @@
+.header-background {
+  background-color: rgb(210, 101, 101);
+}
+
+.header-text {
+  font: 800 Arial, Helvetica, sans-serif;
+  font-size: 4rem;
+  padding: 3rem;
+  text-align: center;
+  color: white;
+  letter-spacing: 2px;
+}
