@@ -4,28 +4,18 @@ import './Input.css';
 export default class TextInput extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      input: '',
-      list: []
-    };
   }
 
   handleChange = (event) => {
-    this.setState({
-      input: event.target.value
-    });
+    this.props.onInputChange(event.target.value);
   }
 
   handleSubmit = (event) => {
     event.preventDefault();
-    if (this.state.input) {
-      console.log(this.state.input);
-      this.setState({
-        input: ''
-      });
+    if (this.props.input) {
+      this.props.onHandleSubmit();
+      // reset input field
       document.getElementById('text-input').value = '';
-      this.state.list.push(this.state.input);
-      console.log(this.state.list);
     }
   }
 
@@ -33,7 +23,7 @@ export default class TextInput extends Component {
     return (
       <form className="form-container" onSubmit={this.handleSubmit}>
         <input id="text-input" type="text" name="text-input" className="text-input"
-        value={this.state.value} onChange={this.handleChange} />
+         onChange={this.handleChange} />
         <input type="submit" value="Add" className="submit-button"/>
       </form>
     );

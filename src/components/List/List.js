@@ -3,15 +3,18 @@ import './List.css';
 import Item from '../Item/Item';
 
 export default class List extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {};
-  }
 
   render() {
+    const { list } = this.props;
     return (
       <ul>
-        <Item />
+      {list.length ? list.map(item => {
+        return (
+          <Item item={item}/>
+        );
+      }) :
+      <p>You have nothing to do yet..</p>
+      }
       </ul>
     );
   }
