@@ -1,0 +1,23 @@
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.text-input {
+  height: 1.5rem;
+  width: 25rem;
+  font-size: 1.25rem;
+}
+
+.submit-button {
+  margin-left: 1rem;
+  background-color: rgb(210, 101, 101);
+  padding: .5rem 1rem;
+  color: white;
+  font-family: Helvetica, sans-serif;
+  font-size: .75rem;
+  font-weight: 700;
+  border-radius: .1rem
+}

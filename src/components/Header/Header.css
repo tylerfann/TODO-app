@@ -3,9 +3,9 @@
 }
 
 .header-text {
-  font: 800 Arial, Helvetica, sans-serif;
-  font-size: 4rem;
-  padding: 3rem;
+  font-family: Helvetica, sans-serif;
+  font-size: 2rem;
+  padding: 1rem;
   text-align: center;
   color: white;
   letter-spacing: 2px;
