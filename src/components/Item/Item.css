@@ -1,0 +1,11 @@
+.item {
+  list-style: none;
+  background-color: rgb(255, 181, 181, .25);
+  padding: 1em;
+  font-size: 1.25em;
+  font-family: Helvetica, sans-serif;
+  color: rgb(161, 77, 77);
+  margin-bottom: .5em;
+  border-radius: .25em;
+  border: .15em solid rgb(210, 101, 101);
+}

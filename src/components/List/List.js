@@ -1,21 +1,22 @@
 import React, { Component } from 'react';
 import './List.css';
 import Item from '../Item/Item';
-
+import '../Item/Item.css';
 export default class List extends Component {
 
   render() {
     const { list } = this.props;
     return (
-      <ul>
+      <section className="list-container">
       {list.length ? list.map(item => {
         return (
-          <Item item={item}/>
+          <ul className="list">
+            <Item item={item}/>
+          </ul>
         );
-      }) :
-      <p>You have nothing to do yet..</p>
+      }) : <p className="item">You have nothing to do yet...</p>
       }
-      </ul>
+      </section>
     );
   }
 }
