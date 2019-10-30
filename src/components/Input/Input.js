@@ -9,26 +9,36 @@ export default class TextInput extends Component {
     }
   }
 
-  handleSubmit = (event) => {
-    //this.props.onInputChange(inputValue);
-    this.props.onHandleSubmit(this.state.input);
-    this.setState({input:''})
-      // reset input field
+  handleSubmit = () => {
+    const { input } = this.state;
+    if (input) {
+      this.props.onHandleSubmit(input);
+      this.setState({input:''}) 
+    }
   }
-  onChange = (e) =>{
-    this.setState({[e.target.name]: e.target.value});
+  
+  handleChange = (event) =>{
+    this.setState({[event.target.name]: event.target.value});
+  }
+
+  handleRemoveAll = () => {
+    this.props.onRemoveAll();
   }
 
   render() {
-    const { list, onRemoveItem } = this.props;
+    const { list } = this.props;
     return (
-      <div>
       <form className="form-container">
-        <input onChange={this.onChange} value={this.state.input} id="text-input" type="text" name="input" className="text-input"
-          />
-        <input type="button" onClick={this.handleSubmit} value="Add" className="submit-button"/>
+        <input onChange={this.handleChange} value={this.state.input}
+          id="text-input" type="text" name="input" className="text-input"
+        />
+        <input type="button" onClick={this.handleSubmit}
+          value="Add" className="submit-button"
+        />
+        <input type="button" onClick={list.length ? this.handleRemoveAll : null}
+          value="Remove all" className="submit-button"
+        />
       </form>
-      </div>
     );
   }
 }

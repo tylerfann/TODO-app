@@ -17,16 +17,19 @@ export default class App extends Component {
   }
 
   handleSubmit = (value) => {
-    // reset state
     this.setState(prevState => ({
       list: [...prevState.list, value]
-    }))
+    }));
   }
 
   handleRemoveItem = (item) => {
     this.setState(prevState => ({
-      list: prevState.list.filter(val=>val !== item)
-    }))
+      list: prevState.list.filter(val => val !== item)
+    }));
+  }
+
+  handleRemoveAll = () => {
+    this.setState({list: []});
   }
 
   render() {
@@ -36,10 +39,9 @@ export default class App extends Component {
         <Header />
         <Input input={input} onInputChange={this.handleInputChange}
           onHandleSubmit={this.handleSubmit} list={list}
-          onRemoveItem={this.handleRemoveItem}
+          onRemoveItem={this.handleRemoveItem} onRemoveAll={this.handleRemoveAll}
         />
         <List list={list} onRemoveItem={this.handleRemoveItem} />
-
       </section>
     );
   }
