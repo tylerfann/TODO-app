@@ -8,10 +8,10 @@ export default class List extends Component {
     const { list, onRemoveItem } = this.props;
     return (
       <section className="list-container">
-      {list.length ? list.map(item => {
+      {list.length ? list.map((item, index) => {
         return (
           <ul className="list">
-            <Item item={item} onRemoveItem={() => onRemoveItem(item)} />
+            <Item item={item} onRemoveItem={() => onRemoveItem(index)} />
           </ul>
         );
       }) : <p className="item">You have nothing to do yet...</p>
