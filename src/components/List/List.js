@@ -5,13 +5,14 @@ import '../Item/Item.css';
 export default class List extends Component {
 
   render() {
-    const { list } = this.props;
+    const { list, onRemoveItem } = this.props;
+    console.log(list)
     return (
       <section className="list-container">
       {list.length ? list.map(item => {
         return (
           <ul className="list">
-            <Item item={item}/>
+            <Item item={item} onRemoveItem={()=>onRemoveItem(item)} />
           </ul>
         );
       }) : <p className="item">You have nothing to do yet...</p>

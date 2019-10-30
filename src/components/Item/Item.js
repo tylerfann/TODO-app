@@ -3,7 +3,10 @@ import './Item.css';
 export default class Item extends Component {
   render() {
     return (
-      <li className="item">{this.props.item}</li>
+      <li className="item">
+        <p>{this.props.item}</p>
+        <button onClick={this.props.onRemoveItem} className="remove-button">Remove</button>
+      </li>
     );
   }
 }

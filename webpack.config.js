@@ -7,6 +7,7 @@ module.exports = {
     path: path.join(__dirname, '/dist'),
     filename: 'index_bundle.js'
   },
+  devtool: 'source-map',
   module: {
     rules: [
       {
@@ -20,6 +21,12 @@ module.exports = {
         use: [
           'style-loader',
           'css-loader'
+        ]
+      },
+      {
+        test: /\.(png|svg|jpg|gif)$/,
+        use: [
+          'file-loader'
         ]
       }
     ]
