@@ -20,9 +20,9 @@ export default class Content extends Component {
     }));
   }
 
-  handleRemoveItem = (index) => {
+  handleRemoveItem = (value) => {
    this.setState(prevState => ({
-     list: prevState.list.filter((val, ind) => ind !== index)
+     list: prevState.list.filter((val) => val !== value)
    }));
   }
 

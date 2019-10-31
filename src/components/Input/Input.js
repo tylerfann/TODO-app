@@ -23,6 +23,7 @@ export default class TextInput extends Component {
 
   handleRemoveAll = () => {
     this.props.onRemoveAll();
+    this.setState({input: ''});
   }
 
   render() {

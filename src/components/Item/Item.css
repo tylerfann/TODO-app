@@ -3,7 +3,7 @@
 .item {
   list-style: none;
   background-color: rgb(255, 181, 181, .25);
-  padding: .5em 2em;
+  padding: .5em 1em;
   font-size: 1.25em;
   font-family: Helvetica, sans-serif;
   color: rgb(161, 77, 77);
@@ -22,4 +22,15 @@
   border: .1em solid black;
   font-size: .7em;
   font-weight: 500;
+}
+
+.edit-button {
+  background-color: rgb(210, 101, 101);
+  color: white;
+  padding: .15em .5em;
+  border-radius: .25em;
+  border: .1em solid rgb(210, 101, 101);
+  font-size: .7em;
+  font-weight: 400;
+  margin-right: .5em;
 }
